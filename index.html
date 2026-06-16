@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REVO Solar | Save Up To 90% On Your Electricity Bill</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <div class="logo-bolt">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#F5A500"/><path d="M18 4L8 18h8l-2 10 14-16h-8l2-8z" fill="white"/></svg>
+      </div>
+      <div class="logo-text">
+        <div class="logo-name"><span class="logo-r">R</span><span class="logo-evo">EVO</span></div>
+        <div class="logo-sub">Powering a Better Tomorrow</div>
+      </div>
+    </div>
+    <div class="nav-phone">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="#F5A500"/></svg>
+      <div class="phone-info">
+        <div class="phone-label">Call / WhatsApp</div>
+        <div class="phone-num">86791 11428</div>
+      </div>
+      <a href="https://wa.me/918679111428" target="_blank" class="nav-wa">
+        <svg width="30" height="30" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#25D366"/><path d="M22.5 9.5C20.8 7.8 18.5 6.8 16 6.8 11 6.8 7 10.8 7 15.8c0 1.7.4 3.3 1.2 4.7L7 25l4.6-1.2c1.4.7 2.9 1.1 4.4 1.1 5 0 9-4 9-9C25 13.4 24 11.1 22.5 9.5zM16 23.3c-1.3 0-2.6-.3-3.8-1l-.2-.1-2.7.7.7-2.6-.2-.2C9.1 18.8 8.7 17.4 8.7 15.9c0-4.1 3.4-7.4 7.4-7.4 1.9 0 3.7.7 5.1 2.1 1.3 1.4 2.1 3.2 2.1 5.3 0 4.1-3.3 7.4-7.3 7.4zm4-5.5c-.2-.1-1.3-.7-1.5-.7-.2-.1-.3-.1-.4.1-.1.2-.6.8-.7.9-.1.1-.2.1-.4 0-1.2-.6-2-1.1-2.7-2.3-.2-.3.1-.3.4-.8.1-.2.1-.3 0-.5-.1-.1-.5-1.2-.7-1.7-.2-.5-.3-.4-.4-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.9 2.2 1 2.3c.1.2 1.4 2.2 3.5 3.1 1.7.8 2.1.6 2.6.5.5-.1 1.5-.6 1.7-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z" fill="white"/></svg>
+      </a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-container">
+
+    <!-- LEFT TEXT -->
+    <div class="hero-left">
+      <p class="save-label">SAVE UP TO</p>
+      <div class="big-percent">90%</div>
+      <h1 class="bill-headline">ON YOUR<br>ELECTRICITY BILL</h1>
+      <div class="hero-badge-pill">With Solar Power For Your Home</div>
+      <ul class="check-list">
+        <li><span class="ck">&#10003;</span> Government Subsidy Available</li>
+        <li><span class="ck">&#10003;</span> Easy EMI Options</li>
+        <li><span class="ck">&#10003;</span> 25 Year Performance Warranty</li>
+        <li><span class="ck">&#10003;</span> Free Site Visit &amp; Inspection</li>
+      </ul>
+      <a href="https://wa.me/918679111428" target="_blank" class="wa-hero-btn">
+        <svg width="22" height="22" viewBox="0 0 32 32" style="flex-shrink:0"><path d="M22.5 9.5C20.8 7.8 18.5 6.8 16 6.8 11 6.8 7 10.8 7 15.8c0 1.7.4 3.3 1.2 4.7L7 25l4.6-1.2c1.4.7 2.9 1.1 4.4 1.1 5 0 9-4 9-9C25 13.4 24 11.1 22.5 9.5zm-6.5 13.8c-1.3 0-2.6-.3-3.8-1l-.2-.1-2.7.7.7-2.6-.2-.2C9.1 18.8 8.7 17.4 8.7 15.9c0-4.1 3.4-7.4 7.4-7.4 1.9 0 3.7.7 5.1 2.1 1.3 1.4 2.1 3.2 2.1 5.3 0 4.1-3.3 7.4-7.3 7.4zm4-5.5c-.2-.1-1.3-.7-1.5-.7-.2-.1-.3-.1-.4.1-.1.2-.6.8-.7.9-.1.1-.2.1-.4 0-1.2-.6-2-1.1-2.7-2.3-.2-.3.1-.3.4-.8.1-.2.1-.3 0-.5-.1-.1-.5-1.2-.7-1.7-.2-.5-.3-.4-.4-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.9 2.2 1 2.3c.1.2 1.4 2.2 3.5 3.1 1.7.8 2.1.6 2.6.5.5-.1 1.5-.6 1.7-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z" fill="white"/></svg>
+        WHATSAPP &amp; CHECK MY SAVINGS
+      </a>
+      <div class="social-proof">
+        <div class="avatars">
+          <div class="av" style="background:#f87171"></div>
+          <div class="av" style="background:#60a5fa;margin-left:-10px"></div>
+          <div class="av" style="background:#34d399;margin-left:-10px"></div>
+        </div>
+        <div class="proof-text-wrap">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="proof-text">Trusted by 1000+ Homeowners<br>Across Noida, Ghaziabad &amp; UP</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER IMAGE -->
+    <div class="hero-center">
+      <img
+        src="hero-family.jpg"
+        alt="Family with solar home"
+        class="hero-img-main"
+      >
+    </div>
+
+    <!-- CALCULATOR CARD -->
+    <div class="calc-card" id="calculator">
+      <h3 class="calc-title">SOLAR SAVINGS CALCULATOR</h3>
+      <p class="calc-sub">Enter your monthly electricity bill</p>
+      <div class="bill-display">&#8377; <span id="bill-amount">5,000</span></div>
+      <input type="range" id="bill-slider" min="500" max="20000" step="500" value="5000" class="bill-slider">
+      <div class="slider-labels"><span>&#8377;500</span><span>&#8377;20,000+</span></div>
+      <div class="result-rows">
+        <div class="result-row">
+          <div class="rn">1</div>
+          <div class="rl">Estimated Monthly Savings</div>
+          <div class="rv" id="monthly-savings">&#8377; 4,100</div>
+        </div>
+        <div class="result-row">
+          <div class="rn">2</div>
+          <div class="rl">Estimated Annual Savings</div>
+          <div class="rv" id="annual-savings">&#8377; 49,200</div>
+        </div>
+        <div class="result-row">
+          <div class="rn">3</div>
+          <div class="rl">Recommended System Size</div>
+          <div class="rv" id="system-size">3 KW</div>
+        </div>
+        <div class="result-row">
+          <div class="rn">4</div>
+          <div class="rl">Govt. Subsidy (Up to)</div>
+          <div class="rv" id="subsidy-val">&#8377; 78,000</div>
+        </div>
+        <div class="result-row">
+          <div class="rn">5</div>
+          <div class="rl">Payback Period</div>
+          <div class="rv" id="payback-val">3 &#8211; 4 Years</div>
+        </div>
+      </div>
+      <button class="report-btn" onclick="openWA()">GET MY FREE SOLAR REPORT</button>
+      <div class="calc-trust">&#128274; 100% Secure &bull; No Spam &bull; Expert Assistance</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-container">
+    <div class="trust-item">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="18" stroke="#ccc" stroke-width="1.5"/><path d="M11 19l6 6L27 13" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><div class="ti-main">MNRE Approved</div><div class="ti-sub">Trusted &amp; Certified</div></div>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="18" stroke="#ccc" stroke-width="1.5"/><circle cx="19" cy="19" r="7" stroke="#1a1a1a" stroke-width="1.8"/><circle cx="19" cy="19" r="3" fill="#F5A500"/><path d="M19 8v4M19 26v4M8 19h4M26 19h4" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <div><div class="ti-main">Premium Tier-1</div><div class="ti-sub">Solar Components</div></div>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="18" stroke="#ccc" stroke-width="1.5"/><path d="M19 7L9 12v9c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12v-9L19 7z" stroke="#1a1a1a" stroke-width="1.8" fill="none"/><path d="M14 19l4 4 7-8" stroke="#F5A500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div><div class="ti-main">25 Year</div><div class="ti-sub">Performance Warranty</div></div>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="18" stroke="#ccc" stroke-width="1.5"/><path d="M19 10v8l5 4" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round"/><circle cx="19" cy="22" r="9" stroke="#1a1a1a" stroke-width="1.8"/></svg>
+      <div><div class="ti-main">Net Metering</div><div class="ti-sub">Available</div></div>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="18" stroke="#ccc" stroke-width="1.5"/><path d="M9 29V20l10-9 10 9v9H23v-7h-8v7H9z" stroke="#1a1a1a" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+      <div><div class="ti-main">Fast &amp; Hassle Free</div><div class="ti-sub">Installation</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- REAL RESULTS -->
+<section class="results-section">
+  <div class="section-wrap">
+    <h2 class="sec-title">REAL RESULTS. <span class="orange-text">REAL SAVINGS.</span></h2>
+    <p class="sec-sub">See how much our customers are saving every month</p>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="city-tag noida">Noida</div>
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=190&fit=crop" alt="Noida rooftop solar" class="rc-img">
+        <div class="rc-body">
+          <div class="rc-row"><span class="rc-lbl">Previous Bill</span><span class="rc-old">&#8377; 7,200 <em>/month</em></span></div>
+          <div class="rc-row after-solar"><span class="rc-lbl">After Solar</span><span class="rc-new">&#8377; 850 <em>/month</em></span></div>
+          <div class="rc-savings"><span>Annual Savings</span><span class="rc-amt">&#8377; 76,200</span></div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="city-tag ghazi">Ghaziabad</div>
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=190&fit=crop" alt="Ghaziabad rooftop solar" class="rc-img">
+        <div class="rc-body">
+          <div class="rc-row"><span class="rc-lbl">Previous Bill</span><span class="rc-old">&#8377; 5,500 <em>/month</em></span></div>
+          <div class="rc-row after-solar"><span class="rc-lbl">After Solar</span><span class="rc-new">&#8377; 650 <em>/month</em></span></div>
+          <div class="rc-savings"><span>Annual Savings</span><span class="rc-amt">&#8377; 58,200</span></div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="city-tag gnoida">Greater Noida</div>
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=190&fit=crop" alt="Greater Noida rooftop solar" class="rc-img">
+        <div class="rc-body">
+          <div class="rc-row"><span class="rc-lbl">Previous Bill</span><span class="rc-old">&#8377; 10,000 <em>/month</em></span></div>
+          <div class="rc-row after-solar"><span class="rc-lbl">After Solar</span><span class="rc-new">&#8377; 1,200 <em>/month</em></span></div>
+          <div class="rc-savings"><span>Annual Savings</span><span class="rc-amt">&#8377; 1,05,600</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="join-text">&#128101; Join 1000+ happy families who have reduced their electricity bills with Go Revo Solar.</p>
+  </div>
+</section>
+
+<!-- SUBSIDY SECTION -->
+<section class="subsidy-section" id="subsidy">
+  <div class="section-wrap">
+    <h2 class="sec-title">GOVERNMENT SUBSIDY MAKES SOLAR AFFORDABLE</h2>
+    <p class="sec-sub">Get up to 40% subsidy on your solar system</p>
+    <div class="subsidy-strip">
+      <div class="ss-col">
+        <div class="ss-lbl">System Cost</div>
+        <div class="ss-val">&#8377; 2,50,000</div>
+      </div>
+      <div class="ss-op">&#8722;</div>
+      <div class="ss-col">
+        <div class="ss-lbl">Government Subsidy</div>
+        <div class="ss-val orange-text">&#8377; 78,000</div>
+        <div class="ss-note">(Up to 40%)</div>
+      </div>
+      <div class="ss-op">=</div>
+      <div class="ss-col">
+        <div class="ss-lbl">Your Effective Cost</div>
+        <div class="ss-val">&#8377; 1,72,000</div>
+      </div>
+      <div class="emi-box">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" stroke="#F5A500" stroke-width="2"/><path d="M12 18h12M18 12v12" stroke="#F5A500" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <div class="emi-label">Easy EMI<br>Options Available</div>
+      </div>
+    </div>
+    <p class="subsidy-note">*Subsidy amount may vary as per MNRE guidelines and system capacity.</p>
+    <div class="solar-icon-right">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="10" y="30" width="60" height="35" rx="3" fill="#F5A500" opacity="0.15"/><rect x="10" y="30" width="60" height="35" rx="3" stroke="#F5A500" stroke-width="2"/><line x1="30" y1="30" x2="30" y2="65" stroke="#F5A500" stroke-width="1.5"/><line x1="50" y1="30" x2="50" y2="65" stroke="#F5A500" stroke-width="1.5"/><line x1="10" y1="47" x2="70" y2="47" stroke="#F5A500" stroke-width="1.5"/><circle cx="40" cy="18" r="7" fill="#F5A500" opacity="0.3"/><circle cx="40" cy="18" r="4" fill="#F5A500"/><path d="M40 8v4M40 22v4M30 18h4M46 18h4M33 11l3 3M44 22l3 3M33 25l3-3M44 14l3-3" stroke="#F5A500" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE REVO -->
+<section class="why-section">
+  <div class="section-wrap">
+    <h2 class="sec-title">WHY CHOOSE REVO?</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="wi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="48" r="0"/><circle cx="24" cy="16" r="7" stroke="#1a1a1a" stroke-width="2"/><path d="M10 40c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="wi-lbl">Experienced<br>Installation Team</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="16" width="32" height="20" rx="3" stroke="#1a1a1a" stroke-width="2"/><line x1="8" y1="22" x2="40" y2="22" stroke="#1a1a1a" stroke-width="1.5"/><line x1="24" y1="16" x2="24" y2="36" stroke="#1a1a1a" stroke-width="1.5"/><circle cx="24" cy="9" r="5" fill="#F5A500" opacity="0.6"/><path d="M24 7l2 4h-4l2-4z" fill="#F5A500"/></svg>
+        </div>
+        <div class="wi-lbl">High Efficiency<br>Solar Panels</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="12" y="8" width="24" height="32" rx="3" stroke="#1a1a1a" stroke-width="2"/><path d="M18 18h12M18 24h12M18 30h8" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round"/><path d="M26 28l4 4 6-7" stroke="#F5A500" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="wi-lbl">Complete Subsidy<br>Assistance</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="12" stroke="#1a1a1a" stroke-width="2"/><path d="M24 18v6l5 3" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/><path d="M18 8h12" stroke="#F5A500" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <div class="wi-lbl">Net Metering<br>Support</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M30 10c4.4 4.4 4.4 11.6 0 16l-2-2c3.3-3.3 3.3-8.7 0-12l2-2zM18 10c-4.4 4.4-4.4 11.6 0 16l2-2c-3.3-3.3-3.3-8.7 0-12l-2-2z" fill="#F5A500" opacity="0.7"/><circle cx="24" cy="18" r="5" stroke="#1a1a1a" stroke-width="2"/><path d="M24 23v14M20 37h8" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="wi-lbl">After-Sales<br>Service</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 6L10 13v10c0 8.3 6 16.1 14 18 8-1.9 14-9.7 14-18V13L24 6z" stroke="#1a1a1a" stroke-width="2" fill="none"/><text x="24" y="28" text-anchor="middle" font-size="10" font-weight="800" fill="#F5A500" font-family="Inter,sans-serif">25Y</text></svg>
+        </div>
+        <div class="wi-lbl">25 Year<br>Warranty Support</div>
+      </div>
+      <div class="why-item">
+        <div class="wi-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 40V28l16-14 16 14v12H30V30H18v10H8z" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M18 40V32h12v8" stroke="#F5A500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="wi-lbl">Trusted Local<br>Company</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4-STEP PROCESS -->
+<section class="process-section" id="work">
+  <div class="section-wrap">
+    <h2 class="sec-title">OUR SIMPLE 4 STEP PROCESS</h2>
+    <div class="process-steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-lbl">Request Free<br>Assessment</div>
+      </div>
+      <div class="step-arrow">&#8250;</div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-lbl">Site Visit &amp;<br>Inspection</div>
+      </div>
+      <div class="step-arrow">&#8250;</div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-lbl">Professional<br>Installation</div>
+      </div>
+      <div class="step-arrow">&#8250;</div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-lbl">Start Saving<br>From Day 1</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="section-wrap">
+    <h2 class="sec-title">FREQUENTLY ASKED QUESTIONS</h2>
+    <div class="faq-grid">
+      <div class="faq-col">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How much can I save on my electricity bill? <span class="faq-plus">+</span></div>
+          <div class="faq-a">With a properly sized solar system, you can save up to 90% on your monthly electricity bill. Savings depend on your current consumption, system size, and local tariff rates.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Do I get government subsidy? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Yes! Under PM Surya Ghar scheme, you can get up to &#8377;78,000 subsidy on a 3KW system. We handle the complete subsidy documentation and processing for you.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What is the payback period? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Typically 3&#8211;4 years with government subsidy. After that, you enjoy free electricity for 20+ more years, making solar one of the best investments for your home.</div>
+        </div>
+      </div>
+      <div class="faq-col">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">Do solar panels work on cloudy weather? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Yes! Modern solar panels generate electricity even on cloudy days, at reduced efficiency. UP averages 300+ sunny days per year, making solar an ideal investment here.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">What is the maintenance cost? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Solar systems require minimal maintenance, mainly occasional cleaning. Our 25-year performance warranty and after-sales service ensure complete peace of mind.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-q">How long do solar panels last? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Premium Tier-1 solar panels last 25+ years with less than 0.5% annual degradation. They continue generating electricity well beyond the warranty period.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta" id="contact">
+  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1400&h=350&fit=crop&q=80" alt="House at night" class="fcta-bg-img">
+  <div class="fcta-overlay"></div>
+  <div class="fcta-inner">
+    <div class="fcta-text">
+      <h2>START SAVING ON YOUR ELECTRICITY BILLS TODAY!</h2>
+      <p>Get your free solar savings report in just 30 seconds.</p>
+    </div>
+    <div class="fcta-actions">
+      <a href="https://wa.me/918679111428" target="_blank" class="fcta-btn">
+        <svg width="20" height="20" viewBox="0 0 32 32" style="flex-shrink:0"><path d="M22.5 9.5C20.8 7.8 18.5 6.8 16 6.8 11 6.8 7 10.8 7 15.8c0 1.7.4 3.3 1.2 4.7L7 25l4.6-1.2c1.4.7 2.9 1.1 4.4 1.1 5 0 9-4 9-9C25 13.4 24 11.1 22.5 9.5zm-6.5 13.8c-1.3 0-2.6-.3-3.8-1l-.2-.1-2.7.7.7-2.6-.2-.2C9.1 18.8 8.7 17.4 8.7 15.9c0-4.1 3.4-7.4 7.4-7.4 1.9 0 3.7.7 5.1 2.1 1.3 1.4 2.1 3.2 2.1 5.3 0 4.1-3.3 7.4-7.3 7.4zm4-5.5c-.2-.1-1.3-.7-1.5-.7-.2-.1-.3-.1-.4.1-.1.2-.6.8-.7.9-.1.1-.2.1-.4 0-1.2-.6-2-1.1-2.7-2.3-.2-.3.1-.3.4-.8.1-.2.1-.3 0-.5-.1-.1-.5-1.2-.7-1.7-.2-.5-.3-.4-.4-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.9 2.2 1 2.3c.1.2 1.4 2.2 3.5 3.1 1.7.8 2.1.6 2.6.5.5-.1 1.5-.6 1.7-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3z" fill="white"/></svg>
+        WHATSAPP &amp; GET FREE ASSESSMENT
+      </a>
+      <div class="fcta-call">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" fill="white"/></svg>
+        or Call Now <strong>86791 11428</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" id="about">
+  <div class="footer-container">
+    <div class="footer-col">
+      <div class="footer-logo-row">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#F5A500"/><path d="M18 4L8 18h8l-2 10 14-16h-8l2-8z" fill="white"/></svg>
+        <span class="fl-r">R</span><span class="fl-evo">EVO</span>
+      </div>
+      <p class="f-tagline">Powering a Better Tomorrow</p>
+      <p class="f-desc">Go Revo is committed to providing high quality solar products that help you save money and contribute to a greener future.</p>
+      <div class="socials">
+        <a href="#" class="soc-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" class="soc-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="soc-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 6.4a2.8 2.8 0 00-1.9-1.9C18.9 4 12 4 12 4S5.1 4 3.4 4.5A2.8 2.8 0 001.5 6.4 29 29 0 001 12a29 29 0 00.5 5.6A2.8 2.8 0 003.4 19.5C5.1 20 12 20 12 20s6.9 0 8.6-.5a2.8 2.8 0 001.9-1.9A29 29 0 0023 12a29 29 0 00-.5-5.6z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a1a1a"/></svg>
+        </a>
+        <a href="#" class="soc-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-h">COMPANY DETAILS</h4>
+      <p class="f-text">Go Revo is Currently owned and operated by Primetower Infrastructure Pvt Ltd.</p>
+      <p class="f-text mt10">GSTIN: 09AAPCP0491C1ZB</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-h">CORPORATE OFFICE</h4>
+      <p class="f-text">&#128205; Sri Nand Lal Niwas, Opposite Civil Lines Police Station, Civil Lines, Moradabad, Uttar Pradesh - 244001</p>
+      <p class="f-text mt8">&#128222; 86791 11428</p>
+      <p class="f-text">&#9993; info@gorevo.in</p>
+      <p class="f-text">&#127760; www.gorevo.in</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-h">QUICK LINKS</h4>
+      <div class="quick-grid">
+        <a href="#home">Home</a><a href="#solutions">Solar Solutions</a>
+        <a href="#about">About Us</a><a href="#faq">FAQs</a>
+        <a href="#subsidy">Subsidy</a><a href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&#169; 2026 REVO. All Rights Reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
