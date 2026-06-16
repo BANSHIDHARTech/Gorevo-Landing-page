@@ -43,6 +43,7 @@ img { display: block; max-width: 100%; }
   flex-shrink: 0;
 }
 .logo-bolt { display: flex; align-items: center; }
+.logo-img { height: 36px; width: auto; display: block; }
 .logo-text { display: flex; flex-direction: column; line-height: 1; }
 .logo-name { font-size: 22px; font-weight: 900; letter-spacing: -0.5px; }
 .logo-r { color: var(--orange); }
