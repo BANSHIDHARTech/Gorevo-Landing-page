@@ -764,6 +764,173 @@ img { display: block; max-width: 100%; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
 
+/* ── REDESIGNED WHY CHOOSE ── */
+.why-section { background: #fff; position: relative; overflow: hidden; }
+
+.why-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+.why-header-left { flex: 1; }
+.why-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 14px 5px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 0.3px;
+  margin-bottom: 14px;
+}
+.why-headline {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--dark);
+  letter-spacing: -0.4px;
+  line-height: 1.18;
+  max-width: 520px;
+}
+.why-lead {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.55;
+}
+.why-house-img {
+  width: 360px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* Stats row */
+.why-stats-row {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+}
+.wstat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 20px 22px;
+}
+.wstat-ic {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #FFF8E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.wstat-num { font-size: 20px; font-weight: 900; color: var(--dark); line-height: 1; }
+.wstat-name { font-size: 12px; font-weight: 700; color: var(--dark); margin-top: 2px; }
+.wstat-note { font-size: 11px; color: var(--muted); line-height: 1.4; }
+.wstat-stars { color: var(--orange); }
+.wstat-sep { width: 1px; background: var(--border); flex-shrink: 0; margin: 14px 0; }
+
+/* Feature cards */
+.wcard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.wcard {
+  flex: 0 0 calc(25% - 11px);
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 18px 22px;
+  transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+}
+.wcard:hover {
+  box-shadow: 0 6px 24px rgba(245,165,0,0.13);
+  border-color: #f5d080;
+  transform: translateY(-2px);
+}
+.wcard-ic { margin-bottom: 12px; }
+.wcard-title { font-size: 13.5px; font-weight: 700; color: var(--dark); line-height: 1.3; }
+.wcard-bar {
+  width: 30px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin: 8px 0 10px;
+}
+.wcard-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* Trust bottom bar */
+.why-trust-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFF8E7;
+  border-radius: 10px;
+  padding: 16px 22px;
+  border: 1.5px solid #f0e6cc;
+}
+.wtb-left { display: flex; align-items: center; gap: 14px; }
+.wtb-title { font-size: 14px; font-weight: 700; color: var(--dark); }
+.wtb-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.wtb-solar-svg { flex-shrink: 0; opacity: 0.85; }
+
+/* ── SUBSIDY BEAUTIFICATION ── */
+.subsidy-section { background: #fffbf4; position: relative; overflow: hidden; }
+.subsidy-dots {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(circle, #F5A500 1.5px, transparent 1.5px);
+  background-size: 13px 13px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.subsidy-dots-tl { top: 20px; left: 20px; }
+.subsidy-dots-br { bottom: 20px; right: 20px; }
+.subsidy-strip {
+  box-shadow: 0 4px 28px rgba(0,0,0,0.07);
+  border: 1.5px solid #ede8df;
+}
+
+/* ── WHY SECTION RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .wcard { flex: 0 0 calc(33.333% - 10px); }
+  .why-house-img { width: 280px; height: 190px; }
+  .why-headline { font-size: 26px; }
+}
+@media (max-width: 860px) {
+  .why-header-row { flex-direction: column; }
+  .why-house-img { width: 100%; height: 200px; }
+  .why-stats-row { flex-wrap: wrap; }
+  .wstat-item { flex: 1 0 calc(50% - 1px); border-bottom: 1px solid var(--border); }
+  .wstat-sep { display: none; }
+  .wcard { flex: 0 0 calc(50% - 7px); }
+  .why-trust-bottom { flex-wrap: wrap; gap: 12px; }
+  .wtb-solar-svg { display: none; }
+}
+@media (max-width: 600px) {
+  .wcard { flex: 0 0 100%; }
+  .wstat-item { flex: 0 0 100%; }
+  .why-headline { font-size: 22px; }
+}
+
 /* Mobile nav open */
 .nav-links.mobile-open {
   display: flex;
