@@ -91,3 +91,30 @@ window.addEventListener('scroll', () => {
   document.querySelector('.navbar').style.boxShadow =
     window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.3)' : 'none';
 });
+
+// Scroll reveal
+(function () {
+  const selectors = [
+    '.sec-title', '.why-headline', '.process-heading',
+    '.rc2', '.wcard', '.pc-card', '.faq-item',
+    '.wstat-item', '.trust-item', '.why-header-row',
+    '.results-divider', '.process-footer-banner',
+    '.why-trust-bottom', '.pfb-left'
+  ];
+  const els = document.querySelectorAll(selectors.join(','));
+  els.forEach(el => el.classList.add('reveal'));
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        const siblings = Array.from(e.target.parentElement.children).filter(c => c.classList.contains('reveal'));
+        const idx = siblings.indexOf(e.target);
+        e.target.style.transitionDelay = `${Math.min(idx, 3) * 70}ms`;
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+})();
