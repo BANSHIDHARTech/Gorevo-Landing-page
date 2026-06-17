@@ -106,9 +106,9 @@ img { display: block; max-width: 100%; }
 .hero-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 0 0 28px;
+  padding: 0;
   display: grid;
-  grid-template-columns: 200px 320px 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   min-height: 560px;
   align-items: stretch;
@@ -116,7 +116,7 @@ img { display: block; max-width: 100%; }
 
 /* LEFT */
 .hero-left {
-  padding: 44px 28px 44px 0;
+  padding: 44px 28px 44px 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -224,10 +224,11 @@ img { display: block; max-width: 100%; }
   padding: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
+  grid-column: span 2;
 }
 .calc-inner { display: flex; flex: 1; overflow: hidden; }
 .calc-form {
-  flex: 0 0 54%;
+  flex: 0 0 50%;
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
@@ -876,7 +877,7 @@ img { display: block; max-width: 100%; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .hero-container { grid-template-columns: 1fr 280px 280px; }
+  .hero-container { grid-template-columns: repeat(4, 1fr); }
   .wcard { flex: 0 0 calc(33.333% - 10px); }
   .why-house-img { width: 280px; height: 190px; }
   .why-headline { font-size: 26px; }
