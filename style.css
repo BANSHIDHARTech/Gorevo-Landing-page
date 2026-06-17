@@ -315,10 +315,10 @@ img { display: block; max-width: 100%; }
   font-size: 13px;
   font-weight: 800;
   color: var(--dark);
-  text-align: left;
+  text-align: center;
   line-height: 1.3;
 }
-.calc-sub { font-size: 11px; color: var(--muted); margin-top: 0; line-height: 1.45; }
+.calc-sub { font-size: 11px; color: var(--muted); margin-top: 0; line-height: 1.45; text-align: center; }
 .bill-slider { width: 100%; margin-top: 6px; accent-color: var(--orange); cursor: pointer; }
 .slider-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); margin-top: 2px; }
 .cf-field { display: flex; flex-direction: column; gap: 4px; }
@@ -375,7 +375,7 @@ img { display: block; max-width: 100%; }
   gap: 0;
   background: #fafafa;
 }
-.cr-header { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px; }
+.cr-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; margin-bottom: 12px; }
 .cr-check-circle {
   width: 28px; height: 28px;
   border-radius: 50%;
@@ -383,18 +383,19 @@ img { display: block; max-width: 100%; }
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-.cr-title { font-size: 13.5px; font-weight: 800; color: var(--dark); line-height: 1.3; }
-.cr-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.cr-title { font-size: 13.5px; font-weight: 800; color: var(--dark); line-height: 1.3; text-align: center; }
+.cr-sub { font-size: 11px; color: var(--muted); margin-top: 2px; text-align: center; }
 .metric-row {
-  display: flex; align-items: center; gap: 10px;
-  padding: 9px 0;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 8px 0;
   border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 .metric-row:last-child { border-bottom: none; }
 .mi-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.mi-body { flex: 1; min-width: 0; }
-.mi-label { font-size: 11.5px; color: var(--muted); line-height: 1.3; }
-.mi-val { font-size: 21px; font-weight: 800; line-height: 1.2; margin-top: 2px; }
+.mi-body { min-width: 0; }
+.mi-label { font-size: 11.5px; color: var(--muted); line-height: 1.3; text-align: center; }
+.mi-val { font-size: 24px; font-weight: 800; line-height: 1.2; margin-top: 2px; text-align: center; }
 .mi-unit { font-size: 11.5px; font-weight: 500; }
 
 .report-btn {
