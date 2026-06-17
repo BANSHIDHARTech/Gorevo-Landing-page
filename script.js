@@ -11,44 +11,62 @@ function openWA() {
 
 // Calculator
 const slider = document.getElementById('bill-slider');
-const billAmount = document.getElementById('bill-amount');
+const dropdown = document.getElementById('bill-dropdown');
 
 function formatINR(n) {
   return n.toLocaleString('en-IN');
 }
 
-function updateCalc() {
-  const bill = parseInt(slider.value);
-  billAmount.textContent = formatINR(bill);
+function updateCalc(bill) {
+  bill = parseInt(bill);
 
-  // System size: size to offset ~50% of bill (matches reference marketing numbers)
   const raw_kw = bill / 1800;
-  const system_kw = Math.max(1, Math.round(raw_kw * 2) / 2);
-  const clamped_kw = Math.min(system_kw, 10);
+  const kw = Math.min(Math.max(1, Math.round(raw_kw * 2) / 2), 10);
 
-  const monthly_savings = Math.round(bill * 0.82);
-  const annual_savings = monthly_savings * 12;
+  const system_cost = kw * 65000;
 
-  // PM Surya Ghar subsidy: ₹30k/kW for first 2kW, ₹18k for 3rd kW, capped at ₹78k
-  let subsidy;
-  if (clamped_kw <= 2) subsidy = Math.round(clamped_kw * 30000);
-  else subsidy = 60000 + Math.round(Math.min(clamped_kw - 2, 1) * 18000);
-  subsidy = Math.min(subsidy, 78000);
+  // PM Surya Ghar central subsidy
+  let central_subsidy;
+  if (kw <= 2) central_subsidy = Math.round(kw * 30000);
+  else central_subsidy = 60000 + Math.round(Math.min(kw - 2, 1) * 18000);
+  central_subsidy = Math.min(central_subsidy, 78000);
 
-  const net_cost = (clamped_kw * 85000) - subsidy;
-  const payback = net_cost / annual_savings;
-  const pb_min = Math.floor(payback);
-  const pb_max = pb_min + 1;
+  // Total with UP state subsidy
+  const total_subsidy = Math.min(central_subsidy + 30000, 108000);
 
-  document.getElementById('monthly-savings').textContent = '₹ ' + formatINR(monthly_savings);
-  document.getElementById('annual-savings').textContent = '₹ ' + formatINR(annual_savings);
-  document.getElementById('system-size').textContent = clamped_kw + ' KW';
-  document.getElementById('subsidy-val').textContent = '₹ ' + formatINR(subsidy);
-  document.getElementById('payback-val').textContent = pb_min + ' – ' + pb_max + ' Years';
+  const net_cost = system_cost - central_subsidy;
+  const emi = Math.round(net_cost / 60 * 1.025);
+
+  const monthly_savings = Math.round(bill * 0.9);
+  const bill_after = bill - monthly_savings;
+  const net_savings = monthly_savings - emi;
+  const five_yr = net_savings * 60 + total_subsidy;
+
+  document.getElementById('net-savings').textContent = '₹ ' + formatINR(net_savings);
+  document.getElementById('emi-val').textContent = '₹ ' + formatINR(emi);
+  document.getElementById('subsidy-val').textContent = '₹ ' + formatINR(total_subsidy);
+  document.getElementById('bill-after').textContent = '₹ ' + formatINR(bill_after);
+  document.getElementById('five-yr').textContent = '₹ ' + formatINR(five_yr);
 }
 
-slider.addEventListener('input', updateCalc);
-updateCalc();
+// Sync slider → dropdown
+slider.addEventListener('input', () => {
+  const val = slider.value;
+  // Find closest dropdown option
+  const opts = Array.from(dropdown.options).map(o => parseInt(o.value));
+  const closest = opts.reduce((a, b) => Math.abs(b - val) < Math.abs(a - val) ? b : a);
+  dropdown.value = closest;
+  updateCalc(val);
+});
+
+// Sync dropdown → slider
+dropdown.addEventListener('change', () => {
+  slider.value = dropdown.value;
+  updateCalc(dropdown.value);
+});
+
+// Init
+updateCalc(5000);
 
 // FAQ accordion
 function toggleFaq(el) {
