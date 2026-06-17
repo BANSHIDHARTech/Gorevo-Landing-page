@@ -1,3 +1,21 @@
+// Hero counter animation 0 → 90
+(function() {
+  const el = document.getElementById('pct');
+  if (!el) return;
+  const target = 90;
+  const duration = 1200;
+  const start = performance.now();
+  function tick(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target);
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = target;
+  }
+  requestAnimationFrame(tick);
+})();
+
 // Mobile menu
 function toggleMenu() {
   const links = document.getElementById('nav-links');
